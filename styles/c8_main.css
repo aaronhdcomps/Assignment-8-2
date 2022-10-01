@@ -9,7 +9,8 @@ html {
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 800px;
+    width: 98%;
+	max-width: 960px;
     margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
@@ -34,7 +35,7 @@ header h3 {
 }
 header img {
 	float: left;
-	padding: 0 30px;
+	padding: 0 3.75%;
 }
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
@@ -47,11 +48,11 @@ header img {
 	position: relative;
 }
 #nav_menu ul li {
+	width: 20%;
 	float: left;
 }
 #nav_menu ul li a {
     display: block;
-    width: 160px;
     text-align: center;
     padding: 1em 0;
     text-decoration: none;
@@ -63,6 +64,7 @@ header img {
 	color: yellow;
 }
 #nav_menu ul ul {
+	width: 100%;
     display: none;
     position: absolute;
     top: 100%;
@@ -81,9 +83,9 @@ header img {
 
 /* the styles for the section */
 section {
-	width: 525px;
+	width: 65.625%;
 	float: right;
-	padding: 0 20px 20px 20px;
+	padding: 0 2.5% 20px;
 }
 section h1 {
 	font-size: 150%;
@@ -124,6 +126,8 @@ article h3 {
 	padding-bottom: .25em;
 }
 article img {
+	max-width: 40%;
+	min-width: 150px;
 	float: right;
 	margin: .5em 0 1em 1em;
 	border: 1px solid black;
@@ -131,9 +135,9 @@ article img {
 
 /* the styles for the aside */
 aside {
-	width: 215px;
+	width: 26.875%;
 	float: right;
-	padding: 0 0 20px 20px;
+	padding: 0 0 20px 2.5%;
 }
 aside h2 {
 	color: #800000;
@@ -159,4 +163,58 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
+}
+
+#mobile_menu {
+	display: none;
+}
+
+@media only screen and (max-width: 740px) {
+	aside h3 a {
+		font-size: 85%;
+	}
+	section h1 {
+		font-size: 125%;
+	}
+	section h2, aside h2 {
+		font-size: 110%;
+	}
+}
+@media only screen and (max-width: 650px) {
+	header img {
+		float:none
+	}
+	header {
+		text-align: center;
+	}
+	section {
+		float: none;
+		width: 95%;
+	}
+	aside {
+		float: none;
+		padding: 0 2.5% 20px;
+		width: 95%;
+	}
+	article img {
+		max-width: 30%;
+	}
+	#speakers {
+		column-count: 2;
+	}
+	#nav_menu {
+		display: none;
+	}
+	#mobile_menu {
+		display: block;
+	}
+	.slicknav_menu { 
+		background-color: #800000 !important; 
+	}
+}
+
+@media only screen and (max-width: 440px) {
+	body {
+		font-size: 90%;
+	}
 }
